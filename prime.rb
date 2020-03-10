@@ -1,8 +1,11 @@
-def prime?(number)
-  i = 2
-  while i < number.abs
-    return false if number % i == 0 
-    i += 1 
-  end
-  true
+def prime?(n)
+    if n <= 1
+      return false
+    else 
+        if (2...n).any? { |i| n % i  == 0}
+            return false
+        else
+            return true
+        end 
+    end
 end
