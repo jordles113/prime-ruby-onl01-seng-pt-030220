@@ -1,8 +1,4 @@
 def prime?(number)
-  i = 2
-  while i < number.abs  
-    return false if number % i == 0 
-  end
-  true
-end
+  (2..number-1).none? {|x| number % x == 0}
+end 
   
